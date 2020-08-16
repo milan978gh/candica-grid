@@ -3,6 +3,7 @@ $ff-sans: Arial, sans-serif;
 $left-bg: #c4b35a;
 $right-bg: darken($left-bg, 10%);
 $main-bg: lighten($left-bg, 30%);
+$header-bg: lighten($left-bg, 40%);
 $color: #131313;
 $accent: #c33a46;
 
@@ -15,8 +16,6 @@ $accent: #c33a46;
     box-sizing: border-box;
 }
 body{
-    width: 100%;
-    max-width: 1600px;
     height: 100vh;
     font-family: $ff-sans;
 }
@@ -33,12 +32,13 @@ span{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 5fr 3fr 1fr;
     width: 100%;
+    max-width: 1600px;
     height: 100vh;
 }
 header{
     grid-column: 3/4;
     grid-row: 1/2;
-    background-color: #fff;
+    background-color: $header-bg;
 
     ul{
         width: 100%;
@@ -62,7 +62,7 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        width: 80%;
+        width: 70%;
         height: 100%;
         margin: 0 auto;
 
@@ -92,27 +92,9 @@ main{
     grid-row: 3/4;
     background: $left-bg;
     place-items: center;
-    position: relative;
 
-    &:before{
-        content: '';
-        position: absolute;
-        display: block;
-        width: 80px;
-        height: 2px;
-        background: $right-bg;
-        left: 10%;
-        top: 50%;
-    }
-    &:after{
-        content: '';
-        position: absolute;
-        display: block;
-        width: 80px;
-        height: 2px;
-        background: $right-bg;
-        right: 10%;
-        top: 50%;
+    h2{
+    border-bottom: 2px solid $right-bg;
     }
 }
 .right{
@@ -121,27 +103,9 @@ main{
     grid-row: 3/4;
     background: $right-bg;
     place-items: center;
-    position: relative;
 
-    &:before{
-        content: '';
-        position: absolute;
-        display: block;
-        width: 80px;
-        height: 2px;
-        background: $left-bg;
-        left: 10%;
-        top: 50%;
-    }
-    &:after{
-        content: '';
-        position: absolute;
-        display: block;
-        width: 80px;
-        height: 2px;
-        background: $left-bg;
-        right: 10%;
-        top: 50%;
+    h2{
+        border-bottom: 2px solid $left-bg;
     }
 }
 .candy{
