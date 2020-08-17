@@ -1,4 +1,4 @@
-@import '../variables';
+@import './variables';
 
 *{
     margin: 0;
@@ -88,7 +88,7 @@ main{
     text-align: center;
 
     h2{
-    border-bottom: 2px solid $right-bg;
+    border-bottom: 1px solid $right-bg;
     }
 }
 .right{
@@ -100,7 +100,7 @@ main{
     text-align: center;
 
     h2{
-        border-bottom: 2px solid $left-bg;
+        border-bottom: 1px solid $left-bg;
     }
 }
 .candy{
@@ -144,9 +144,9 @@ footer{
                 letter-spacing: 1px;
             }
             h1{
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 letter-spacing: 0;
-                margin: 20px 0;
+                margin: 10px 0;
             }
             p{
                 width: 100%;
@@ -164,11 +164,19 @@ footer{
         grid-column: 1/2;
         grid-row: 4/5;
         font-size: $f-size;
+
+        h2{
+            border-bottom: none;
+        }
     }
     .right{
         grid-column: 1/2;
         grid-row: 5/6;
         font-size: $f-size;
+
+        h2{
+            border-bottom: none;
+        }
     }
     footer{
         grid-column: 1/2;
