@@ -64,6 +64,7 @@ main{
         width: 70%;
         height: 100%;
         margin: 0 auto;
+        text-shadow: 2px 2px 5px #fff;
 
         .logo{
             font-family: $ff-serif;
@@ -134,7 +135,7 @@ footer{
     .wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 8fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 6fr 4fr 1fr 1fr 1fr;
         width: 100%;
         height: 100vh;
     }
@@ -146,7 +147,6 @@ footer{
     main{
         grid-column: 1/2;
         grid-row: 2/3;
-        background-color: #ff949c;
 
 
         .main-text{
@@ -157,41 +157,48 @@ footer{
             width: 80%;
             height: 100%;
             margin: 0 auto;
-            text-shadow: 1px 1px 5px #fff;
     
             .logo{
-                font-family: $ff-serif;
-                color: $accent;
                 font-size: 3rem;
-                font-weight: bold;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
             }
             h1{
                 font-size: 1.5rem;
                 letter-spacing: 0;
-                margin: 50px 0 30px 0;
+                margin: 20px 0;
             }
             p{
                 width: 100%;
+                font-size: initial;
                 line-height: 1.2;
                 letter-spacing: 0;
             }
     
         }
     }
-    .left{
+    .candy{
         grid-column: 1/2;
         grid-row: 3/4;
+        background-image: url(../img/candy.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .left{
+        grid-column: 1/2;
+        grid-row: 4/5;
         background: $left-bg;
+        font-size: .7rem;
     }
     .right{
         grid-column: 1/2;
-        grid-row: 4/5;
+        grid-row: 5/6;
         background: $right-bg;
+        font-size: .7rem;
     }
     footer{
         grid-column: 1/2;
-        grid-row: 5/6;
+        grid-row: 6/7;
         background: $color;
         font-size: .7rem;
     }
