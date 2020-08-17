@@ -1,12 +1,4 @@
-$ff-serif: Georgia, serif;
-$ff-sans: Tahoma, sans-serif;
-$left-bg: #c4b35a;
-$right-bg: darken($left-bg, 10%);
-$main-bg: lighten($left-bg, 30%);
-$header-bg: lighten($left-bg, 40%);
-$color: #131313;
-$accent: #c33a46;
-
+@import '../variables';
 
 *{
     margin: 0;
@@ -85,7 +77,6 @@ main{
             line-height: 1.5;
             letter-spacing: 1px;
         }
-
     }
 }
 .left{
@@ -133,16 +124,12 @@ footer{
 // media queries
 @media(max-width:768px){
     .wrapper{
-        display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 6fr 4fr 1fr 1fr 1fr;
-        width: 100%;
-        height: 100vh;
+        grid-template-rows: 1fr 6fr 4fr repeat(3, 1fr);
     }
     header{
         grid-column: 1/2;
         grid-row: 1/2;
-        background-color: $header-bg;
     }
     main{
         grid-column: 1/2;
@@ -150,13 +137,7 @@ footer{
 
 
         .main-text{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: start;
             width: 80%;
-            height: 100%;
-            margin: 0 auto;
     
             .logo{
                 font-size: 3rem;
@@ -173,33 +154,25 @@ footer{
                 line-height: 1.2;
                 letter-spacing: 0;
             }
-    
         }
     }
     .candy{
         grid-column: 1/2;
         grid-row: 3/4;
-        background-image: url(../img/candy.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
     }
     .left{
         grid-column: 1/2;
         grid-row: 4/5;
-        background: $left-bg;
-        font-size: .7rem;
+        font-size: $f-size;
     }
     .right{
         grid-column: 1/2;
         grid-row: 5/6;
-        background: $right-bg;
-        font-size: .7rem;
+        font-size: $f-size;
     }
     footer{
         grid-column: 1/2;
         grid-row: 6/7;
-        background: $color;
-        font-size: .7rem;
+        font-size: $f-size;
     }
 }
